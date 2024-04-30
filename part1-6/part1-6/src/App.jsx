@@ -52,9 +52,14 @@ const App = () => {
 
   }
 
+
+
+  console.log(selected);
+
 if (all < 1) {
   return (
   <div>
+
   <h1>Give Feedback</h1>
   <button onClick={onHandle} value="good">Good</button>
   <button onClick={onHandle} value="neutral">Neutral</button>
@@ -65,13 +70,21 @@ if (all < 1) {
 }
 
   return (
+    <>
     <div>
+
+
+      </div>
+      <div>
+
+
       <h1>Give Feedback</h1>
       <button onClick={onHandle} value="good">Good</button>
       <button onClick={onHandle} value="neutral">Neutral</button>
       <button onClick={onHandle} value="bad">Bad</button>
       <Stats good={good} neutral={neutral} bad={bad} average={average} positive={positive} all={all} />
     </div>
+    </>
   )
 }
 
