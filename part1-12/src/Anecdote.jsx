@@ -24,7 +24,6 @@ const Anecdote = () => {
         console.log(selected)
     }
 
-
     const [mostVotes, setMostVotes] = useState(0)
     const [popVote, setPopVote] = useState(0)
     const [currentVote, setCurrentVote] = useState(0)
