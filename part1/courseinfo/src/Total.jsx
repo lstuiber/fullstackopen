@@ -1,6 +1,6 @@
-const Total = (props) => {
+const Total = (total) => {
     let addNum =0;
-    const total = props.total.map(value => 
+    const total = total.map(value => 
         addNum = addNum + value.exercises);
     return (
         

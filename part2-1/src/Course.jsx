@@ -1,17 +1,23 @@
 import Content from "./Content";
 import Header from "./Header";
 import Total from "./Total";
-const Course = (props) => {
-    console.log(props.course);
+const Course = ({course}) => {
+
+    console.log("course2", course);
+    const dataItems = course.map((items, i) => 
+      items.parts
+  );
+    console.log("data", dataItems);
     return (
         <div>
-        {props.course.map((item, i) => 
-        <Header key={i} name={item.name} />
+        {course.map((item) => 
+          <div>
+        <Header key={item.id} name={item.name} /> 
+        <Content parts={item.parts} />
+        <Total parts={item.parts}/>
+        </div>
         )}
-       {props.course.map((items, i) => 
-        <Content key={i} course={items.parts} />
-      )}
-      <Total total={props.course} /> 
+
       </div>
     )
 
