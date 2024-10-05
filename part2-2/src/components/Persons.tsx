@@ -1,6 +1,6 @@
 
 
-const Persons = ({persons, match}) => {
+const Persons = ({match}) => {
     return (
 <div>
     <div>{match.map(data => 
